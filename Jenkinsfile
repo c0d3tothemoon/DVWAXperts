@@ -3,8 +3,8 @@ pipeline {
     environment {
         IMAGE_REPO_NAME="dvwapub"
         //REPLACE XXX WITH YOUR STUDENT NUMBER
-        IMAGE_TAG= "sleman-poc"
-        REPOSITORY_URI = "public.ecr.aws/i9p1a8i7/log4shellpub"
+        IMAGE_TAG= "sleman-poc-dwva"
+        REPOSITORY_URI = "public.ecr.aws/i9p1a8i7/dvwapub"
         AWS_DEFAULT_REGION = "ap-southeast-1"
     }
    
