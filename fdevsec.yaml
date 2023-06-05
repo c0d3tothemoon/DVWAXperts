@@ -1,8 +1,8 @@
 version: v1
 
 id:
-  org: XXX-XXX-XXX-XX
-  app: XXX-XXX-XXX-XX
+  org: ffcde0e1-6f91-476e-9bdb-76f12e2653c5
+  app: cad7e6c8-317c-4d6f-9138-3121892f13ac
   
 scanners:
   - sast
