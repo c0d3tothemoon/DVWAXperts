@@ -14,7 +14,7 @@ scanners:
     
 dast:
   url: http://nlb-54a5f0425ef309a7.elb.ap-southeast-1.amazonaws.com:8080/
-#  fortipentest_scanner: false #true|false
+  fortipentest_scanner: false #true|false
   full_scan: true #true|false
 
 fail_pipeline:
