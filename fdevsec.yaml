@@ -2,18 +2,18 @@ version: v1
 
 id:
   org: ffcde0e1-6f91-476e-9bdb-76f12e2653c5
-  app: cad7e6c8-317c-4d6f-9138-3121892f13ac
+  app: 6ea2bd70-c268-4cab-927a-ea2bac70119b
   
 scanners:
   - sast
-  #- dast
+  - dast
   - secret
   - sca
   - iac
   - container   
     
 dast:
-#  url: http://xxx.xxx.xx/
+  url: http://nlb-54a5f0425ef309a7.elb.ap-southeast-1.amazonaws.com:8080/
 #  fortipentest_scanner: false #true|false
   full_scan: true #true|false
 
