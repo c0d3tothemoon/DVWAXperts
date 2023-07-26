@@ -13,7 +13,7 @@ scanners:
   - container   
     
 dast:
-  url: http://nlb-251fe29c4038a5db.elb.ap-southeast-1.amazonaws.com:8080/
+  url: http://abb82b31036484c80b28318d090d5c2d-588344155.ap-southeast-1.elb.amazonaws.com:8081/
   fortipentest_scanner: false #true|false
   full_scan: true #true|false
 
