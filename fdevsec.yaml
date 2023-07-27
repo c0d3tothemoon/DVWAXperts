@@ -17,5 +17,5 @@ dast:
   fortipentest_scanner: false #true|false
   full_scan: true #true|false
 
-#fail_pipeline:
-#  risk_rating: 8
+fail_pipeline:
+  risk_rating: 4
