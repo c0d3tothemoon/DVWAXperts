@@ -1,5 +1,5 @@
 FROM debian:10
-
+USER root
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     debconf-utils && \
@@ -19,7 +19,7 @@ RUN export FGTCA=$(base64 /var/www/html/Fortinet_CA_SSL.cer -w0) && \
 RUN chown www-data:www-data -R /var/www/html && \
     rm /var/www/html/index.html
 
-RUN /etc/init.d/mysql restart && \
+RUN service mysql start && \
     sleep 3 && \
     mysql -uroot -pp4ssw0rd -e "CREATE USER dvwa@localhost IDENTIFIED BY 'p4ssw0rd';CREATE DATABASE dvwa;GRANT ALL privileges ON dvwa.* TO 'dvwa'@localhost;"
 
