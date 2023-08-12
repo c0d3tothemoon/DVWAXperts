@@ -1,5 +1,5 @@
 FROM debian:10
-
+ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -y install dialog
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
