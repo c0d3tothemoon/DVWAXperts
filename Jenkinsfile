@@ -26,13 +26,13 @@ pipeline {
                 }
             }
         }  
- //       stage('Code Scanning - SAST'){
-  //          steps {
-           //      sh 'env | grep -E "JENKINS_HOME|BUILD_ID|GIT_BRANCH|GIT_COMMIT" > /tmp/env'
-           //      sh 'docker pull registry.fortidevsec.forticloud.com/fdevsec_sast:latest'
-           //      sh 'docker run --rm --env-file /tmp/env --mount type=bind,source=$PWD,target=/scan registry.fortidevsec.forticloud.com/fdevsec_sast:latest'
-    //        }
-      //  }
+       stage('Code Scanning - SAST'){
+            steps {
+                 sh 'env | grep -E "JENKINS_HOME|BUILD_ID|GIT_BRANCH|GIT_COMMIT" > /tmp/env'
+                 sh 'docker pull registry.fortidevsec.forticloud.com/fdevsec_sast:latest'
+                 sh 'docker run --rm --env-file /tmp/env --mount type=bind,source=$PWD,target=/scan registry.fortidevsec.forticloud.com/fdevsec_sast:latest'
+            }
+        }
     // Building Docker images
     stage('Building image') {
       steps{
@@ -60,12 +60,12 @@ pipeline {
                  sh 'kubectl set image deployments/dvwa 371571523880.dkr.ecr.us-east-2.amazonaws.com/dvwaxperts:${BUILD_NUMBER}'*/
             }
         } 
-   //    stage('DAST'){
-   //         steps {
-             //    sh 'env | grep -E "JENKINS_HOME|BUILD_ID|GIT_BRANCH|GIT_COMMIT" > /tmp/env'
-             //    sh 'docker pull registry.fortidevsec.forticloud.com/fdevsec_dast:latest'
-             //    sh 'docker run --rm --env-file /tmp/env --mount type=bind,source=$PWD,target=/scan registry.fortidevsec.forticloud.com/fdevsec_dast:latest'
-     //       }
-     //   }
+       stage('DAST'){
+            steps {
+                 sh 'env | grep -E "JENKINS_HOME|BUILD_ID|GIT_BRANCH|GIT_COMMIT" > /tmp/env'
+                 sh 'docker pull registry.fortidevsec.forticloud.com/fdevsec_dast:latest'
+                 sh 'docker run --rm --env-file /tmp/env --mount type=bind,source=$PWD,target=/scan registry.fortidevsec.forticloud.com/fdevsec_dast:latest'
+            }
+        }
     }
 }
