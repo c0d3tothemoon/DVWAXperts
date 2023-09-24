@@ -3,15 +3,15 @@ id:
   app: bd4a4f1a-b841-4fad-bd40-09fe95b2b03b
   
 scanners:
-#  - sast
+  - sast
   - dast
-#  - secret
-#  - sca
-#  - iac
-#  - container   
+  - secret
+  - sca
+  - iac
+  - container   
     
 dast:
-  url: http://af0e98151c3e04fe8b64b8fe1f16248a-c2170ccbf82fb81d.elb.ap-southeast-1.amazonaws.com:8081/
+  url: http://eks-alb-1197922661.ap-southeast-1.elb.amazonaws.com/
 #  fortipentest_scanner: false #true|false
   full_scan: true #true|false
 
