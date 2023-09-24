@@ -10,10 +10,10 @@ scanners:
 #  - iac
 #  - container   
     
-#dast:
-#  url: http://af0e98151c3e04fe8b64b8fe1f16248a-c2170ccbf82fb81d.elb.ap-southeast-1.amazonaws.com:8081/
+dast:
+  url: http://af0e98151c3e04fe8b64b8fe1f16248a-c2170ccbf82fb81d.elb.ap-southeast-1.amazonaws.com:8081/
 #  fortipentest_scanner: false #true|false
-#  full_scan: true #true|false
+  full_scan: true #true|false
 
 #fail_pipeline:
 #  risk_rating: 4
