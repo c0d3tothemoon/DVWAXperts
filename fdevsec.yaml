@@ -1,6 +1,6 @@
 id:
-  org: ffcde0e1-6f91-476e-9bdb-76f12e2653c5
-  app: 576d4432-cef8-4e00-b25b-13ee503eee9a
+  org: xx
+  app: xx
   
 scanners:
   - sast
